@@ -1,0 +1,52 @@
+{
+  "name": "memory-page-replacement",
+  "version": "1.0.0",
+  "description": "刘宇阳实验作业",
+  "main": "./out/main/index.js",
+  "author": "2020401387刘宇阳",
+  "homepage": "https://www.electronjs.org",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:win": "npm run build && electron-builder --win --config",
+    "build:mac": "npm run build && electron-builder --mac --config",
+    "build:linux": "npm run build && electron-builder --linux --config"
+  },
+  "build": {
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false,
+      "shortcutName": "页面置换可视化"
+    },
+    "productName": "页面置换可视化",
+    "copyright": "刘宇阳2020401387 Copyright © 2022"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^1.0.2",
+    "@electron-toolkit/utils": "^1.0.2",
+    "element-plus": "^2.2.26"
+  },
+  "devDependencies": {
+    "@electron/notarize": "^1.2.3",
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "electron": "^21.3.0",
+    "electron-builder": "^23.6.0",
+    "electron-vite": "^1.0.14",
+    "eslint": "^8.28.0",
+    "eslint-plugin-vue": "^9.7.0",
+    "less": "^4.1.3",
+    "prettier": "^2.7.1",
+    "unplugin-auto-import": "^0.12.1",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^3.2.4",
+    "vue": "^3.2.45"
+  }
+}
